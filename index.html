@@ -3,176 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collapsible Airplane Checklist</title>
+    <title>Collapsible Checklist</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif; /* Clean and modern font */
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Light gray background */
-            color: #333; /* Dark gray text color */
+            background-color: #f4f4f4;
+            color: #333;
         }
+        
+
 
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the columns horizontally */
-            max-width: 1200px; /* Max width for the container */
-            margin: auto; /* Center the container */
-            padding: 20px; /* Padding around the container */
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
 
         .column {
-            flex: 1 1 20%; /* Each column takes up 20% of the width by default */
+            flex: 1 1 20%;
             box-sizing: border-box;
             padding: 15px;
-            margin: 10px; /* Margin between boxes */
-            height: auto; /* Flexible height based on content */
-            background-color: white; /* White background for columns */
-            border: 2px solid #0056b3; /* Blue border for formality */
-            border-radius: 4px; /* Rounded corners for elegance */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced box shadow for depth */
+            margin: 10px;
+            height: auto;
+            background-color: white;
+            border: 2px solid #0056b3;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .header {
-            font-size: 24px; /* Header font size */
+            font-size: 24px;
             margin-bottom: 10px;
-            text-align: center; /* Center the header */
-            color: #0056b3; /* Dark blue header color for formality */
-            font-weight: bold; /* Bold header for emphasis */
-            cursor: pointer; /* Pointer cursor for clickable headers */
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .gym-header {
+            color: #0056b3;
+            text-transform: uppercase;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
         }
 
         ul {
-            list-style-type: none; /* Remove default list styling */
-            padding-left: 0; /* Remove padding */
+            list-style-type: none;
+            padding-left: 0;
         }
 
         li {
-            margin: 10px 0; /* Space between checklist items */
-            font-size: 16px; /* Item font size for readability */
-            display: flex; /* Flexbox for alignment */
-            align-items: center; /* Center vertically */
+            margin: 10px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
         }
 
         .checkmark {
-            margin-right: 10px; /* Space between emoji and text */
-            color: darkgray; /* Dark gray color for checkmark */
+            margin-right: 10px;
+            color: darkgray;
         }
 
         .content {
-            display: none; /* Hidden by default */
+            display: none;
+            padding-left: 20px;
         }
 
         @media (max-width: 768px) {
             .column {
-                flex-basis: calc(100% - 20px); /* Full width minus margins for mobile view */
-                margin-bottom: 10px; /* Reduced bottom margin for spacing between rows on mobile */
-                padding: 10px; /* Adjust padding for mobile view */
-                box-shadow: none; /* Optional to remove shadow on mobile for simplicity */
-                border-radius: 2px; /* Slightly smaller radius on mobile for a flatter look */
-             }
-         }
+                flex-basis: calc(100% - 20px);
+                margin-bottom: 10px;
+                padding: 10px;
+                border-radius: 0;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- First Row -->
+        <!-- GYM Section -->
         <div class="column">
-            <div class="header" onclick="toggleContent('content1')">Preflight Checklist</div>
+            
+            <div class="header" onclick="toggleContent('content1')">GYM / REGULAR</div>
             <div class="content" id="content1">
                 <ul>
-                    <li><span class="checkmark">✔️</span> Check fuel levels</li>
-                    <li><span class="checkmark">✔️</span> Inspect control surfaces</li>
-                    <li><span class="checkmark">✔️</span> Verify navigation systems</li>
-                    <li><span class="checkmark">✔️</span> Confirm emergency equipment</li>
+                    <li><span class="checkmark">✔️</span> Download Online Media</li>
+                    <li><span class="checkmark">✔️</span> Charge Earphones</li>
+                    <li><span class="checkmark">✔️</span> Mobile</li>
+                    <li><span class="checkmark">✔️</span> Earphones</li>
+                    <li><span class="checkmark">✔️</span> Keys</li>
+                    <li><span class="checkmark">✔️</span> Smart Watch</li>
+                    <li><span class="checkmark">✔️</span> Gym Clothes</li>
+                    <li><span class="checkmark">✔️</span> Shoes</li>
+                    <li><span class="checkmark">✔️</span> Socks</li>
+                    <li><span class="checkmark">✔️</span> Towel</li>
+                    <li><span class="checkmark">✔️</span> Pack Water</li>
+                    <li><span class="checkmark">✔️</span> Skipping Rope</li>
+                    <li><span class="checkmark">✔️</span> Apply Deo</li>
+                    <li><span class="checkmark">✔️</span> Umbrella</li>
+                    <li><span class="checkmark">✔️</span> Exercise Gloves</li>
+                    <li><span class="checkmark">✔️</span> Wash the Gym Clothes</li>
                 </ul>
              </div>
          </div>
 
+         <!-- WORK Section -->
          <div class="column">
-             <div class="header" onclick="toggleContent('content2')">Safety Procedures</div>
+             <div class="header" onclick="toggleContent('content2')">WORK</div>
              <div class="content" id="content2">
                  <ul>
-                     <li><span class="checkmark">✔️</span> Review safety briefing</li>
-                     <li><span class="checkmark">✔️</span> Ensure seat belts are fastened</li>
-                     <li><span class="checkmark">✔️</span> Check oxygen masks</li>
-                     <li><span class="checkmark">✔️</span> Confirm exit procedures</li>
+                     <li><span class="checkmark">✔️</span> Laptop</li>
+                     <li><span class="checkmark">✔️</span> Charger</li>
+                     <li><span class="checkmark">✔️</span> Notebook</li>
+                     <li><span class="checkmark">✔️</span> Pen</li>
+                     <li><span class="checkmark">✔️</span> Water Bottle</li>
+                     <li><span class="checkmark">✔️</span> Snacks</li>
+                     <li><span class="checkmark">✔️</span> Headphones</li>
+                     <li><span class="checkmark">✔️</span> Umbrella</li>
+                     <li><span class="checkmark">✔️</span> Wallet</li>
+                     <li><span class="checkmark">✔️</span> ID Card</li>
                  </ul>
              </div>
          </div>
 
+         <!-- TRAVEL Section -->
          <div class="column">
-             <div class="header" onclick="toggleContent('content3')">Communication Checks</div>
+             <div class="header" onclick="toggleContent('content3')">TRAVEL</div>
              <div class="content" id="content3">
                  <ul>
-                     <li><span class="checkmark">✔️</span> Test radio functionality</li>
-                     <li><span class="checkmark">✔️</span> Confirm ATIS information</li>
-                     <li><span class="checkmark">✔️</span> Set transponder code</li>
-                     <li><span class="checkmark">✔️</span> Check intercom system</li>
+                     <li><span class="checkmark">✔️</span> Passport</li>
+                     <li><span class="checkmark">✔️</span> Boarding Pass</li>
+                     <li><span class="checkmark">✔️</span> Travel Itinerary</li>
+                     <li><span class="checkmark">✔️</span> Luggage</li>
+                     <li><span class="checkmark">✔️</span> Chargers</li>
+                     <li><span class="checkmark">✔️</span> Headphones</li>
+                     <li><span class="checkmark">✔️</span> Snacks</li>
+                     <li><span class="checkmark">✔️</span> Water Bottle</li>
+                     <li><span class="checkmark">✔️</span> Neck Pillow</li>
+                     <li><span class="checkmark">✔️</span> Medications</li>
                  </ul>
              </div>
          </div>
 
+         <!-- DAILY Section -->
          <div class="column">
-             <div class="header" onclick="toggleContent('content4')">Final Preparations</div>
+             <div class="header" onclick="toggleContent('content4')">DAILY</div>
              <div class="content" id="content4">
                  <ul>
-                     <li><span class="checkmark">✔️</span> Review flight plan</li>
-                     <li><span class="checkmark">✔️</span> Confirm weight and balance</li>
-                     <li><span class="checkmark">✔️</span> Conduct final walk-around</li>
-                     <li><span class="checkmark">✔️</span> Ensure doors are secured</li>
-                 </ul> 
+                     <li><span class="checkmark">✔️</span> Keys</li>
+                     <li><span class="checkmark">✔️</span> Wallet</li>
+                     <li><span class="checkmark">✔️</span> Phone</li>
+                     <li><span class="checkmark">✔️</span> Earphones</li>
+                     <li><span class="checkmark">✔️</span> Charger</li>
+                     <li><span class="checkmark">✔️</span> Water Bottle</li>
+                     <li><span class="checkmark">✔️</span> Snacks</li>
+                     <li><span class="checkmark">✔️</span> Sunglasses</li>
+                     <li><span class="checkmark">✔️</span> Umbrella</li>
+                     <li><span class="checkmark">✔️</span> Tissues</li>
+                 </ul>
              </div>
          </div>
 
-         <!-- Second Row -->
+         <!-- SHOPPING Section -->
          <div class="column">
-             <div class="header" onclick="toggleContent('content5')">Emergency Equipment</div> 
-             <div class="content" id="content5"> 
-                 <ul> 
-                     <!-- New Checklist -->
-                     <li><span class="checkmark">✔️</span> Check fire extinguishers</li> 
-                     <li><span class="checkmark">✔️</span> Verify first aid kit contents</li> 
-                     <li><span class="checkmark">✔️</span> Ensure life vests are accessible</li> 
-                 </ul> 
-             </div>
-         </div>
-
-         <div class="column">
-             <div class="header" onclick="toggleContent('content6')">Passenger Briefing</div> 
-             <div class="content" id="content6"> 
-                 <!-- New Checklist -->
-                 <ul> 
-                     <li><span class="checkmark">✔️</span> Review cabin safety features</li> 
-                     <li><span class="checkmark">✔️</span> Explain emergency exits</li> 
-                     <li><span class="checkmark">✔️</span> Confirm passenger count</li> 
-                 </ul> 
-             </div>
-         </div>
-
-         <div class="column">
-             <div class="header" onclick="toggleContent('content7')">Weather Checks</div> 
-             <div class="content" id="content7"> 
-                 <!-- New Checklist -->
-                 <ul> 
-                     <li><span class="checkmark">✔️</span> Review METAR/TAF reports</li> 
-                     <li><span class="checkmark">✔️</span> Check NOTAMs for route</li> 
-                     <li><span class="checkmark">✔️</span> Assess turbulence forecasts</li> 
-                 </ul> 
-             </div>
-         </div>
-
-         <div class="column">
-             <div class="header" onclick="toggleContent('content8')">Post-Flight Procedures</div> 
-             <div class="content" id="content8"> 
-                 <!-- New Checklist -->
-                 <ul> 
-                     <li><span class="checkmark">✔️</span> Secure aircraft after landing</li> 
-                     <li><span class="checkmark">✔️</span> Complete flight logbook entries</li> 
-                     <li><span class="checkmark">✔️</span> Conduct debrief with crew</li> 
-                 </ul> 
+             <div class="header" onclick="toggleContent('content5')">SHOPPING</div>
+             <div class="content" id="content5">
+                 <ul>
+                     <li><span class="checkmark">✔️</span> Shopping List</li>
+                     <li><span class="checkmark">✔️</span> Reusable Bags</li>
+                     <li><span class="checkmark">✔️</span> Cash/Cards</li>
+                     <li><span class="checkmark">✔️</span> Phone</li>
+                     <li><span class="checkmark">✔️</span> Earphones</li>
+                     <li><span class="checkmark">✔️</span> Water Bottle</li>
+                     <li><span class="checkmark">✔️</span> Snacks</li>
+                     <li><span class="checkmark">✔️</span> Sunglasses</li>
+                     <li><span class="checkmark">✔️</span> Umbrella</li>
+                     <li><span class="checkmark">✔️</span> Tissues</li>
+                 </ul>
              </div>
          </div>
 
