@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airplane Checklist Layout</title>
+    <title>Collapsible Airplane Checklist</title>
     <style>
         body {
             font-family: 'Arial', sans-serif; /* Clean and modern font */
@@ -40,6 +40,7 @@
             text-align: center; /* Center the header */
             color: #0056b3; /* Dark blue header color for formality */
             font-weight: bold; /* Bold header for emphasis */
+            cursor: pointer; /* Pointer cursor for clickable headers */
         }
 
         ul {
@@ -55,8 +56,12 @@
         }
 
         .checkmark {
-            color: #333; /* Dark gray color for checkmark */
-            margin-right: 10px; /* Space between checkmark and text */
+            margin-right: 10px; /* Space between emoji and text */
+            color: darkgray; /* Dark gray color for checkmark */
+        }
+
+        .content {
+            display: none; /* Hidden by default */
         }
 
         @media (max-width: 768px) {
@@ -75,87 +80,115 @@
     <div class="container">
         <!-- First Row -->
         <div class="column">
-            <div class="header">Preflight Checklist</div>
-            <ul>
-                <li><span class="checkmark">✓</span> Check fuel levels</li>
-                <li><span class="checkmark">✓</span> Inspect control surfaces</li>
-                <li><span class="checkmark">✓</span> Verify navigation systems</li>
-                <li><span class="checkmark">✓</span> Confirm emergency equipment</li>
-             </ul>
+            <div class="header" onclick="toggleContent('content1')">Preflight Checklist</div>
+            <div class="content" id="content1">
+                <ul>
+                    <li><span class="checkmark">✔️</span> Check fuel levels</li>
+                    <li><span class="checkmark">✔️</span> Inspect control surfaces</li>
+                    <li><span class="checkmark">✔️</span> Verify navigation systems</li>
+                    <li><span class="checkmark">✔️</span> Confirm emergency equipment</li>
+                </ul>
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Safety Procedures</div>
-             <ul>
-                 <li><span class="checkmark">✓</span> Review safety briefing</li>
-                 <li><span class="checkmark">✓</span> Ensure seat belts are fastened</li>
-                 <li><span class="checkmark">✓</span> Check oxygen masks</li>
-                 <li><span class="checkmark">✓</span> Confirm exit procedures</li>
-             </ul>
+             <div class="header" onclick="toggleContent('content2')">Safety Procedures</div>
+             <div class="content" id="content2">
+                 <ul>
+                     <li><span class="checkmark">✔️</span> Review safety briefing</li>
+                     <li><span class="checkmark">✔️</span> Ensure seat belts are fastened</li>
+                     <li><span class="checkmark">✔️</span> Check oxygen masks</li>
+                     <li><span class="checkmark">✔️</span> Confirm exit procedures</li>
+                 </ul>
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Communication Checks</div>
-             <ul>
-                 <li><span class="checkmark">✓</span> Test radio functionality</li>
-                 <li><span class="checkmark">✓</span> Confirm ATIS information</li>
-                 <li><span class="checkmark">✓</span> Set transponder code</li>
-                 <li><span class="checkmark">✓</span> Check intercom system</li>
-             </ul>
+             <div class="header" onclick="toggleContent('content3')">Communication Checks</div>
+             <div class="content" id="content3">
+                 <ul>
+                     <li><span class="checkmark">✔️</span> Test radio functionality</li>
+                     <li><span class="checkmark">✔️</span> Confirm ATIS information</li>
+                     <li><span class="checkmark">✔️</span> Set transponder code</li>
+                     <li><span class="checkmark">✔️</span> Check intercom system</li>
+                 </ul>
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Final Preparations</div>
-             <ul>
-                 <li><span class="checkmark">✓</span> Review flight plan</li>
-                 <li><span class="checkmark">✓</span> Confirm weight and balance</li>
-                 <li><span class="checkmark">✓</span> Conduct final walk-around</li>
-                 <li><span class="checkmark">✓</span> Ensure doors are secured</li>
-             </ul> 
+             <div class="header" onclick="toggleContent('content4')">Final Preparations</div>
+             <div class="content" id="content4">
+                 <ul>
+                     <li><span class="checkmark">✔️</span> Review flight plan</li>
+                     <li><span class="checkmark">✔️</span> Confirm weight and balance</li>
+                     <li><span class="checkmark">✔️</span> Conduct final walk-around</li>
+                     <li><span class="checkmark">✔️</span> Ensure doors are secured</li>
+                 </ul> 
+             </div>
          </div>
 
          <!-- Second Row -->
          <div class="column">
-             <div class="header">Emergency Equipment</div> 
-             <ul> 
-                 <!-- New Checklist -->
-                 <li><span class="checkmark">✓</span> Check fire extinguishers</li> 
-                 <li><span class="checkmark">✓</span> Verify first aid kit contents</li> 
-                 <li><span class="checkmark">✓</span> Ensure life vests are accessible</li> 
-             </ul> 
+             <div class="header" onclick="toggleContent('content5')">Emergency Equipment</div> 
+             <div class="content" id="content5"> 
+                 <ul> 
+                     <!-- New Checklist -->
+                     <li><span class="checkmark">✔️</span> Check fire extinguishers</li> 
+                     <li><span class="checkmark">✔️</span> Verify first aid kit contents</li> 
+                     <li><span class="checkmark">✔️</span> Ensure life vests are accessible</li> 
+                 </ul> 
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Passenger Briefing</div> 
-             <ul> 
+             <div class="header" onclick="toggleContent('content6')">Passenger Briefing</div> 
+             <div class="content" id="content6"> 
                  <!-- New Checklist -->
-                 <li><span class="checkmark">✓</span> Review cabin safety features</li> 
-                 <li><span class="checkmark">✓</span> Explain emergency exits</li> 
-                 <li><span class="checkmark">✓</span> Confirm passenger count</li> 
-             </ul> 
+                 <ul> 
+                     <li><span class="checkmark">✔️</span> Review cabin safety features</li> 
+                     <li><span class="checkmark">✔️</span> Explain emergency exits</li> 
+                     <li><span class="checkmark">✔️</span> Confirm passenger count</li> 
+                 </ul> 
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Weather Checks</div> 
-             <ul> 
+             <div class="header" onclick="toggleContent('content7')">Weather Checks</div> 
+             <div class="content" id="content7"> 
                  <!-- New Checklist -->
-                 <li><span class="checkmark">✓</span> Review METAR/TAF reports</li> 
-                 <li><span class="checkmark">✓</span> Check NOTAMs for route</li> 
-                 <li><span class="checkmark">✓</span> Assess turbulence forecasts</li> 
-             </ul> 
+                 <ul> 
+                     <li><span class="checkmark">✔️</span> Review METAR/TAF reports</li> 
+                     <li><span class="checkmark">✔️</span> Check NOTAMs for route</li> 
+                     <li><span class="checkmark">✔️</span> Assess turbulence forecasts</li> 
+                 </ul> 
+             </div>
          </div>
 
          <div class="column">
-             <div class="header">Post-Flight Procedures</div> 
-             <ul> 
+             <div class="header" onclick="toggleContent('content8')">Post-Flight Procedures</div> 
+             <div class="content" id="content8"> 
                  <!-- New Checklist -->
-                 <li><span class="checkmark">✓</span> Secure aircraft after landing</li> 
-                 <li><span class="checkmark">✓</span> Complete flight logbook entries</li> 
-                 <li><span class="checkmark">✓</span> Conduct debrief with crew</li> 
-             </ul> 
+                 <ul> 
+                     <li><span class="checkmark">✔️</span> Secure aircraft after landing</li> 
+                     <li><span class="checkmark">✔️</span> Complete flight logbook entries</li> 
+                     <li><span class="checkmark">✔️</span> Conduct debrief with crew</li> 
+                 </ul> 
+             </div>
          </div>
 
     </div>
+
+    <!-- JavaScript to handle collapsible functionality -->
+    <script>
+        function toggleContent(contentId) {
+            var content = document.getElementById(contentId);
+            if (content.style.display === "block") {
+                content.style.display = "none"; // Collapse
+            } else {
+                content.style.display = "block"; // Expand
+            }
+        }
+    </script>
 
 </body>
 </html>
