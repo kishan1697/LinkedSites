@@ -68,13 +68,16 @@
 
         @media (max-width: 768px) {
             .column {
-                flex-basis: calc(50% - 20px); /* Two columns per row on mobile (50% width minus margins) */
-                margin-bottom: 20px; /* Add bottom margin for spacing between rows on mobile */
+                flex-basis: calc(100% - 20px); /* Full width minus margins for mobile view */
+                margin-bottom: 10px; /* Reduced bottom margin for spacing between rows on mobile */
                 box-shadow: none; /* Optional to remove shadow on mobile for simplicity */
                 border-radius: 4px; /* Slightly smaller radius on mobile for a flatter look */
                 padding: 15px; /* Adjust padding for mobile view */
-            }
-        }
+                margin-left: 0; /* Remove left margin on mobile for full width effect */
+                margin-right: 0; /* Remove right margin on mobile for full width effect */
+                margin-top: 10px; /* Optional top margin for spacing between boxes if needed*/
+             }
+         }
     </style>
 </head>
 <body>
@@ -88,78 +91,72 @@
                 <li><input type="checkbox"> Item 2</li>
                 <li><input type="checkbox"> Item 3</li>
                 <li><input type="checkbox"> Item 4</li>
-            </ul>
-        </div>
+             </ul>
+         </div>
 
-        <div class="column">
-            <div class="header">Column 2</div>
-            <ul>
-                <li><input type="checkbox"> Item 5</li>
-                <li><input type="checkbox"> Item 6</li>
-                <li><input type="checkbox"> Item 7</li>
-                <li><input type="checkbox"> Item 8</li>
-            </ul>
-        </div>
+         <div class="column">
+             <div class="header">Column 2</div>
+             <ul>
+                 <li><input type="checkbox"> Item 5</li>
+                 <li><input type="checkbox"> Item 6</li>
+                 <li><input type="checkbox"> Item 7</li>
+                 <li><input type="checkbox"> Item 8</li>
+             </ul>
+         </div>
 
-        <div class="column">
-            <div class="header">Column 3</div>
-            <ul>
-                <li><input type="checkbox"> Item 9</li>
-                <li><input type="checkbox"> Item 10</li>
-                <li><input type="checkbox"> Item 11</li>
-                <li><input type="checkbox"> Item 12</li>
-            </ul>
-        </div>
+         <div class="column">
+             <div class="header">Column 3</div>
+             <ul>
+                 <li><input type="checkbox"> Item 9</li>
+                 <li><input type="checkbox"> Item 10</li>
+                 <li><input type="checkbox"> Item 11</li>
+                 <li><input type="checkbox"> Item12</li>
+             </ul>
+         </div>
 
-        <div class="column">
-            <div class="header">Column 4</div>
-            <ul>
-                <li><input type="checkbox"> Item 13</li>
-                <li><input type="checkbox"> Item 14</li>
-                <li><input type="checkbox"> Item 15</li>
-                <li><input type="checkbox"> Item 16</li>
-            </ul>
-        </div>
+         <div class="column">
+             <div class="header">Column4</div>
+             <ul>
+                 <li><input type="checkbox"> Item13</li>
+                 <li><input type="checkbox"> Item14</li>
+                 <li><input type="checkbox"> Item15</li>
+                 <li><input type="checkbox"> Item16</li>
+             </ul>
+         </div>
 
-        <!-- Second Row -->
-        <div class="column">
-            <div class="header">Column 5</div>
-            <ul>
-                <li><input type="checkbox"> Item 17</li>
-                <li><input type="checkbox"> Item 18</li>
-                <li><input type="checkbox"> Item 19</li>
-                <li><input type="checkbox"> Item 20</li>
-            </ul>
-        </div>
-
-        <div class="column">
-            <div class="header">Column 6</div>
-            <ul>
-                <li><input type="checkbox"> Item 21</li>
-                <li><input type="checkbox"> Item 22</li>
-                <li><input type="checkbox"> Item 23</li>
-                <li><input type="checkbox"> Item 24</li>
-            </ul>
-        </div>
-
-        <div class="column">
-            <div class="header">Column 7</div>
-            <ul>
-                <li><input type="checkbox"> Item 25</li>
-                <li><input type="checkbox"> Item 26</li>
-                <li><input type="checkbox"> Item 27</li>
-                <li><input type="checkbox"> Item 28</li>
+         <!-- Second Row -->
+         <div class="column">
+             <div class="header">Column5</div>
+             <ul>
+                 <li><input type="checkbox"> Item17</li>
+                 <li><input type="checkbox"> Item18</li>
+                 <li><input type="checkbox"> Item19</li>
+                 <li><input type="checkbox"> Item20</li>
              </ul> 
          </div>
 
          <div class="column">
-             <div class="header">Column 8</div> 
+             <div class="header">Column6</div> 
              <ul> 
                  <!-- New Checklist -->
-                 <li><input type="checkbox"> Item29 </ li> 
+                 <li><input type="checkbox"> Item21 </ li> 
                  <!-- Add more items as needed -->
                  <!-- New Checklist -->
                  <!-- Add more items as needed -->
+             </ul> 
+         </div>
+
+         <div class="column">
+             <div class="header">Column7</div> 
+             <ul> 
+                 <!-- New Checklist -->
+                 <!-- Add more items as needed -->
+             </ul> 
+         </div>
+
+         <div class="column">
+             <div class="header">Column8</div> 
+             <ul> 
                  <!-- New Checklist -->
                  <!-- Add more items as needed -->
              </ul> 
