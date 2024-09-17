@@ -1,732 +1,161 @@
-<!--Link to editing url: Paste and open this directly
-
-https://github.com/kishan1697/LinkedSites/edit/master/index.html
-
- -->
-
-
-
 <!DOCTYPE html>
-<html>
-<title>Checklists</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane Checklist Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Clean and modern font */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text color */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the columns horizontally */
+            max-width: 1200px; /* Max width for the container */
+            margin: auto; /* Center the container */
+            padding: 20px; /* Padding around the container */
+        }
+
+        .column {
+            flex: 1 1 20%; /* Each column takes up 20% of the width by default */
+            box-sizing: border-box;
+            padding: 15px;
+            margin: 10px; /* Margin between boxes */
+            height: auto; /* Flexible height based on content */
+            background-color: white; /* White background for columns */
+            border: 2px solid #0056b3; /* Blue border for formality */
+            border-radius: 8px; /* Rounded corners for elegance */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced box shadow for depth */
+        }
+
+        .header {
+            font-size: 24px; /* Header font size */
+            margin-bottom: 10px;
+            text-align: center; /* Center the header */
+            color: #0056b3; /* Dark blue header color for formality */
+            font-weight: bold; /* Bold header for emphasis */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default list styling */
+            padding-left: 0; /* Remove padding */
+        }
+
+        li {
+            margin: 10px 0; /* Space between checklist items */
+            font-size: 16px; /* Item font size for readability */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center vertically */
+        }
+
+        .checkmark {
+            color: #333; /* Dark gray color for checkmark */
+            margin-right: 10px; /* Space between checkmark and text */
+        }
+
+        @media (max-width: 768px) {
+            .column {
+                flex-basis: calc(100% - 20px); /* Full width minus margins for mobile view */
+                margin-bottom: 10px; /* Reduced bottom margin for spacing between rows on mobile */
+                padding: 10px; /* Adjust padding for mobile view */
+                box-shadow: none; /* Optional to remove shadow on mobile for simplicity */
+                border-radius: 4px; /* Slightly smaller radius on mobile for a flatter look */
+             }
+         }
+    </style>
+</head>
 <body>
-<link rel="shortcut icon" type="image" href="Linked.png" />
+
+    <div class="container">
+        <!-- First Row -->
+        <div class="column">
+            <div class="header">Preflight Checklist</div>
+            <ul>
+                <li><span class="checkmark">✓</span> Check fuel levels</li>
+                <li><span class="checkmark">✓</span> Inspect control surfaces</li>
+                <li><span class="checkmark">✓</span> Verify navigation systems</li>
+                <li><span class="checkmark">✓</span> Confirm emergency equipment</li>
+             </ul>
+         </div>
+
+         <div class="column">
+             <div class="header">Safety Procedures</div>
+             <ul>
+                 <li><span class="checkmark">✓</span> Review safety briefing</li>
+                 <li><span class="checkmark">✓</span> Ensure seat belts are fastened</li>
+                 <li><span class="checkmark">✓</span> Check oxygen masks</li>
+                 <li><span class="checkmark">✓</span> Confirm exit procedures</li>
+             </ul>
+         </div>
+
+         <div class="column">
+             <div class="header">Communication Checks</div>
+             <ul>
+                 <li><span class="checkmark">✓</span> Test radio functionality</li>
+                 <li><span class="checkmark">✓</span> Confirm ATIS information</li>
+                 <li><span class="checkmark">✓</span> Set transponder code</li>
+                 <li><span class="checkmark">✓</span> Check intercom system</li>
+             </ul>
+         </div>
+
+         <div class="column">
+             <div class="header">Final Preparations</div>
+             <ul>
+                 <li><span class="checkmark">✓</span> Review flight plan</li>
+                 <li><span class="checkmark">✓</span> Confirm weight and balance</li>
+                 <li><span class="checkmark">✓</span> Conduct final walk-around</li>
+                 <li><span class="checkmark">✓</span> Ensure doors are secured</li>
+             </ul> 
+         </div>
+
+         <!-- Second Row -->
+         <div class="column">
+             <div class="header">Emergency Equipment</div> 
+             <ul> 
+                 <!-- New Checklist -->
+                 <li><span class="checkmark">✓</span> Check fire extinguishers</li> 
+                 <li><span class="checkmark">✓</span> Verify first aid kit contents</li> 
+                 <li><span class="checkmark">✓</span> Ensure life vests are accessible</li> 
+             </ul> 
+         </div>
+
+         <div class="column">
+             <div class="header">Passenger Briefing</div> 
+             <ul> 
+                 <!-- New Checklist -->
+                 <li><span class="checkmark">✓</span> Review cabin safety features</li> 
+                 <li><span class="checkmark">✓</span> Explain emergency exits</li> 
+                 <li><span class="checkmark">✓</span> Confirm passenger count</li> 
+             </ul> 
+         </div>
+
+         <div class="column">
+             <div class="header">Weather Checks</div> 
+             <ul> 
+                 <!-- New Checklist -->
+                 <li><span class="checkmark">✓</span> Review METAR/TAF reports</li> 
+                 <li><span class="checkmark">✓</span> Check NOTAMs for route</li> 
+                 <li><span class="checkmark">✓</span> Assess turbulence forecasts</li> 
+             </ul> 
+         </div>
+
+         <div class="column">
+             <div class="header">Post-Flight Procedures</div> 
+             <ul> 
+                 <!-- New Checklist -->
+                 <li><span class="checkmark">✓</span> Secure aircraft after landing</li> 
+                 <li><span class="checkmark">✓</span> Complete flight logbook entries</li> 
+                 <li><span class="checkmark">✓</span> Conduct debrief with crew</li> 
+             </ul> 
+         </div>
+
+    </div>
 
 </body>
-
-
-<!--Row 01 -->
-	<div class="row">
-	  <div class="column">
-	    <div class="card">
-	      <div class="container">
-	       <h2 class="Set1">OFFICE</h2>
-	       
- 				<mark><b>PACK BAG</b></mark>
- 				<ul style="list-style-type:circle">
-
-	        <li>Laptop Bag</li>
-	        <li>Laptop + Charger</li>
-	        <li>Mouse + Pin</li>
-	        <li>Mobile + Charger</li>
-	        <li>Second Mobile + Charger</li>
-	        <li>Wired Black earphones</li>
-	        <li>OnePlus Budz + Charger</li>
-	        <li>Diary + Pens</li>
-	        <li>Bain ID Card</li>
-	        <li>Powerbank</li>
-        <br>
-	        <li>Book + Newspaper</li>
-	        <li>Watch</li>
-	        <li>Spectacles (2)</li>
-	        <li>Wallet + Cards</li>
-        <br>
-	        <li>Trim/Nails</li>
-	        <li>Lotion/Apply on Hair</li>
-	        
-        <br>
-	        <li>Keys</li>
-	        <li>Water Bottle</li>
-	        <li>Tiffin</li>
-	        <li>Snacks</li>
-        <br>
-
-	        <li>Comb</li>
-	        <li>Umbrella</li>
-	        <li>Sanitizer</li>
-	        <li>Mask (1+2)</li>
-	        <li>Deo</li>
-	        <li>Wetwipes</li>
-	        <li>Moisturizer</li>
-	        <li>Mints + Gums</li>
-        </ul>
-
-				<mark><b>FORMAL CHECKLIST</b></mark>
-      	<ul style="list-style-type:circle">
-					<li>Pants</li>
-	        <li>Shirt</li>
-	        <li>Top Undergarment</li>
-	        <li>Underpants</li>
-	        <li>Handkerchief (2)</li>
-
-	        
-	        <li>Belt</li>
-	        <li>Tie - 3</li>
-	        <li>Blazer</li>
-
-	        <li>Socks</li>
-	        <li>Shoes</li>
-		</ul>
-
-
-			<mark><b>CASUAL CHECKLIST</b></mark>
-			<ul style="list-style-type:circle">
-			
-			
-	        <li>Shirt</li>
-	        <li>Jeans</li>
-	        <li>Casual Belt</li>
-	        <li>Casual Shoes - 2</li>
-	        <li>Smart Band</li>
-	        <li>Socks - 3</li>
-	        <li>Sports Clothes - 2+2</li>
-	        <li>Bid Napking for travel - 1</li>
-
-			</ul>			
-
-
-	      </div>
-	    </div>
-	  </div>
-	  
-	  <div class="column">
-	    <div class="card">
-	        <div class="container">
-	        <h2 class="Set1">TASKS/ DAILY</h2>
-	        <ul style="list-style-type:circle">	
-			<!--OFFICE-->		        
-		        <b>BAIN</b>		        
-		        <li>Update - Daily Hours</li>
-		        <li>Note - Daily Hours</li>
-		        <li>Fill - Karma form [Monday]</li>
-		        <li>Mark - Attendance</li>
-		        <li>Note - Daily Work</li>
-		        <li>File + Update - Claim Sheet</li>
-		        <li>Click decks (Friday)</li>
-
-
-				<br>
-
-			<!--MORNING-->		        
-		        <b>MORNING - PHYSICAL</b>		        
-		        <li>Make Bed</li>
-		        <li>Charge - Devices</li>
-		        <li>Warm Water + Lemon</li>
-		        <li>Fill Water bottle</li>
-		        <li>Multiple bottle for home</li>
-		        <li>Eat - Fruits</li>
-		        <li>Brush Teeth</li>
-		        <li>Sabja/Soak + Drink</li>
-		        <li>Water Home Plants</li>
-		        <li>Eat - Gums for Teeth</li>
-		        <li>PACK BAG</li>
-		        <br>
-		        <li>Breathing exercise</li>
-		        <li>Gym & Exercise(s)</li>
-		        <br>
-		        <li>Shower</li>
-		        <li>Breakfast</li>
-		        <li>Drink Shake</li>
-		        <li>Wear/Posture Corrector</li>
-		        
-
-				<br>
-				<b>MORNING - ON GO</b>		       
-		        <li>Check - Calendars</li>
-		        <li>Check - Emails</li>
-		        <li>Check - Social Media</li>
-		        <li>Update - Apps (Auto)</li>
-		        <li>Update - Timeline</li>
-		        <li>Update - Task for the day</li>
-		        <br>
-		        <li>Mind/Solve Puzzles</li>
-		        <br>
-
-		    <!--EARLY AFTERNOON-->		        
-	        <b>EARLY AFTERNOON</b>		        
-		        <li>Eat - Salad</li>
-		        <li>Eat - Dry Fruits</li>
-		        
-		        <br>
-				
-				<!--AFTERNOON-->		        
-	        <b>AFTERNOON</b>		        
-		        <li>Eat - Hair Gums</li>
-		        <li>Eat - Medicines</li>
-		        <li>Drink - Water</li>
-		        <li>Quick Exercises</li>
-		        <br>
-		    
-		    <!--EARLY EVENING-->
-		    	<b>EARLY EVENING</b>		        
-		        <li>Healthy Snacks</li>
-	        <br>
-
-        <!--POST DINNER-->
-		    	<b>POST DINNER</b>		        
-		        <li>Charge - Devices</li>
-		        <li>Charge - Earphones</li>
-		        <li>Charge - PowerBank</li>
-		        <li>Charge - Trimmer</li>
-		        <li>Fill - Water Bottle</li>
-
-	        <br>
-
-        <!--WORK END-->
-		    	<b>WORK ENDING</b>		        
-		        <li>PACK GYM BAG</li>
-		        <li>Quick Exercise(s)</li>
-
-	        <br>
-
-
-		    <!--NIGHT-->
-		    	<b>NIGHT</b>		        
-		        
-		        <li>Set Morning Alarm</li>
-		        <li>Tomorrow/Task List</li>
-		      <br>
-		        <li>Water - Drink</li>
-		       	<li>Soak - Dry fruits</li>
-		       	<li>Brush Teeth</li>
-		        <li>Moisturise hands + legs</li>
-		        <li>Hair Oiling</li>
-		        <li>Shower</li>
-		        <li>Pack GYM bag</li>
-		        <li>Iron - WFH Shirt</li>
-	        <br>
-		        <li>Remove ALL from charging</li>
-		        <li>Computer Table/Cover</li>
-		        <li><b>Check</b> - Lock/Gas/Lights</li>
-		        <br>
-			
-			</ul>
-	      </div>
-	    </div>
-	  </div>
-	
-	  <div class="column">
-	    <div class="card">
-	      	<div class="container">
-	        <h2 class="Set1">TASKS/ WEEKEND</h2>
-	        <ul style="list-style-type:circle">
-			
-			
-
-		    <!--WEEKEND-->
-		    	<mark><b>CALLS</b></mark>
-		        <li>Masa + Masi</li>
-		        <li>Mama</li>
-		        <li>Bapa + Baa</li>
-		        <li>Baa</li>
-		        <br>
-
-		        <mark><b>PERSONAL BODY</b></mark>
-		        <li>Brush/Change</li>
-		        <li>Hair/Eyebrow + Nose</li>
-		        <li>Nails/Clip</li>
-		        <li>Heels/RubOff</li>
-		        <li>Lobe/Clean</li>
-		        <li>Shoes/Polish</li>
-		        <li>Shoes/Wash</li>
-		        <li>Body/Trim</li>
-		        <li>Trimmer/Charge</li>
-
-		        <br>
-
-		        <mark><b>MAINTENANCE</b></mark>
-						<li>Home Glasses_Clean</li>
-						<li>Bike_Clean Helmet</li>
-						<li>Bike_Check Breaks/Mirror</li>
-						<li>Bike_Oil Change + Breaks</li>
-						<li>Fan_Rubber Base/Check</li>
-						<li>Earphones_Clean</li>
-						<li>Monitor_Check Screws</li>
-						<li>Check/Marshall speaker</li>
-						<br>
-
-						<mark><b>MONEY TRACKING</b></mark>
-
-		        
-		        <li>Update - 'MASTER BANK'</li>
-		        <li>Read + Update - Information Dump(s)</li>
-		        <li>Review Expenses</li>
-		        <li>Identify - Next week expense strategy </li>
-		        <br>
-
-		        <mark><b>BILL PAYMENTS</b></mark>
-		        <li>EMI - AXIS TO CBI - <b>1<sup>st</sup></b></li>
-		        <li>YBL CC - <b>4<sup>th</sup></b></li>
-		        <li>Netflix - <b>9<sup>th</sup></b></li>
-		        <li>Electricity - <b>12<sup>th</sup></b></li>
-		        <li>Gas - <b>12<sup>th</sup></b></li>
-		        <li>Spotify - <b>13<sup>th</sup></b></li>
-		        <li>SBI CC - <b>20<sup>th</sup></b></li>
-		        
-		        <br>
-		        
-		        <mark><b>E-WORKS</b></mark>
-		        <li>'ONE STOP'/File update</li>
-		        <li>Update/<a href="https://iima1-my.sharepoint.com/:x:/g/personal/p21kishan_iima_ac_in/EeRWC33vp39Iq0JfLkXFn2wBWl38x5GpadCJKWfUqtM0nw?e=P5aLwQ">'Clothes'</a></li>
-		        <li>Flights Data (Excel)</li>
-		        
-
-		        <br>
-		        <li>Mobile  - Sort + Clean</li>
-		        <li>OnePlus - Run/Maintenance</li>
-		        <li>Drive - Sort + Clean</li>
-		        <li>Email - Clean - ThunderBird</li>
-		        <br>
-		        <li>Backup - Whatsapp</li>
-		        <li>Backup - SMS & Call</li>
-		        <li>Backup - Contacts</li>
-		        <li>Mega - Login (5)_Monthly</li>
-		        <br>
-
-		        <mark><b>BAIN RELATED</b></mark>
-		        <li>Salary Slip - Self Mail - <b>30<sup>th</sup></b></li>
-		        <li>SummarySalary/<a href="https://iima1-my.sharepoint.com/:x:/r/personal/p21kishan_iima_ac_in/Documents/$%20Personal/Career/1.%20Bain%20%26%20Co/Job/Salary%20Slips%20+%20Summary/Summary%20-%20Bain.xlsx?d=wfabb1cdd22854cd086537e2dc681500e&csf=1&web=1&e=boCtRX">Update - <b>30<sup>th</sup></b></a></li>
-		        <li>Update/<a href="https://iima1-my.sharepoint.com/:x:/r/personal/p21kishan_iima_ac_in/Documents/$%20Personal/Career/Humans.xlsx?d=wfd6779a7d6e2473b8be7709a16b1282c&csf=1&web=1&e=FW7ff3">Humans@Life</a></li>
-		        <li>Update/<a href="https://www.notion.so/Work-Bain-ec6560ef29de42b0b287425ab11f2f75?pvs=4">'WORK @ BAIN'</a></li>
-		        <li>Running CV/Update</li>
-				<br>
-
-			</ul>
-
-
-<!--DIFFERENT FORMAT MARKINGS
-			<mark>Online Courses:</mark>
-			<ul style="list-style-type:circle">
-			<li><a href="https://zidbits.com/">Zidbits</a></li>
--->	
-
-			</ul>
-	      </div>
-	    </div>
-	  </div>
-	  
-	  <div class="column">
-	    <div class="card">
-	      	<div class="container">
-	        <h2 class="Set1">CARRY/ REGULAR</h2>
-
-			<ul style="list-style-type:circle">
-			
-			<!--GYM-->		        
-        <mark><b>GYM</b></mark>
-      		<li>Download Online Media</li>
-      		<li>Charge Earphones</li>
-      	<br>
-	        <li>Mobile</li>
-	        <li>Earphones</li>
-					<li>Keys</li>
-					<li>Smart Watch</li>
-				<br>
-	        <li>Gym Clothes</li>
-	       	<li>Shoes</li>
-	        <li>Socks</li>
-	        <li>Towel</li>
-	        <li>Pack Water</li>
-	        <li>Skipping Rope</li>
-  	    <br>
-	        <li>Apply Deo</li>
-	        <li>Umbrella</li>
-	        <li>Exercise Gloves</li>
-	        <li>Wash the Gym Clothes</li>
-			
-			</ul>
-
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="column">
-	    <div class="card">
-	      	<div class="container">
- 		<h2 class="Set1">TRAVEL CHECK</h2>
-	    <b><mark>Office</mark> - PACK BAG</b>
-	    <br>
-	    <b><mark>Office</mark> - DAILY CHECKLISTS</b>
-	    <br>
-	    <br>
-	    <b>Musts</b>   
-			<ul style="list-style-type:circle">
-		        
-				<li>Bain - ID Card</li>
-				<li>Pen & Notepad</li>
-				<li>Wallet (Check Cash)</li>
-        <li>Room Key + Home/Bike Keys</li>
-        <li>Aadhar Card</li>
-        <li>Passport</li>
-        <li>Booking - Travel</li>
-        <li>Booking - Hotel</li>
-        
-
-			</ul>
-
-			<b>Electronics</b>   
-			<ul style="list-style-type:circle">
-		        
-        <li>Mobile + Charger (1)</li>
-        <li>PowerBank + Cord</li>
-        <li>Laptop(s) + Charger(s)</li>
-        <li>Mouse + USB key</li>
-        <li>Ipad + Charger</li>
-        <li>Earphones + Chargers</li>
-        <li>Trimmer [Charged]</li>
-        <li>Razor</li>
-        <li>Adapter [o/s India]</li>
-        
-
-			</ul>
-	    <b>Sundry Things</b>   
-			<ul style="list-style-type:circle">
-		        
-        <li>Comb</li>
-        <li>Watch</li>
-        <li>Casual Watch</li>
-        <li>Perfume</li>
-        <li>Deo</li>
-        <br>
-        <li>Formal Shoes</li>
-        <li>Casual Shoes</li>
-        <li>Slides</li>
-        <br>
-        <li>Gym - Shoes</li>
-        <li>Gym - Socks</li>
-        <li>Gym - Clothes [2 pairs]</li>
-        <li>Gym - Napkin</li>
-
-
-			</ul>	
-
-
-	    <b>Personal Care</b>   
-			<ul style="list-style-type:circle">
-		        
-        <li>Brush & Paste & Tongue</li>
-        <li>Timmer - Box</li>
-        <li>Facewash (1)</li>
-        <li>Sunscreen</li>
-        <li>Moisturiser (1)</li>
-        <br>
-        <li>Deo + Spray</li>
-        <li>Earbuds (10)</li>
-        <li>Nailcutter (1)</li>
-        <li>Mints</li>
-        <li>Regular Medicines</li>
-        <li>Masks - 1+3</li>
-        <li>Water Bottle</li>
-        <li>Bag + Bag cover</li>
-			</ul>		        
-
-	    <b>Health</b>   
-			<ul style="list-style-type:circle">
-
-	        <li>Sabja</li>
-	        <li>Amla Powder</li>
-	        
-			</ul>
-
-			<b>Backups</b>   
-			<ul style="list-style-type:circle">
-
-        <li>Bank-aids (2-3)</li>
-        <li>Eno</li>
-        <li>Vicks Balm</li>
-        <li>Dolo + Vicks Tablets</li>
-        <li>Throat Tablets</li>
-
-
-			</ul>
-			
-				
-
-
-
-		        
-	      </div>
-	    </div>
-	  </div>
-
-	</div>
-<!--Row 01 ENDING-->
-
-
-
-
-<!--Row 06 -->
-	<div class="row">
-	  <div class="column">
-	    <div class="card">
-	      <div class="container">
-	       <h2 class="Set1">INFORMATION DUMPS</h2>
-	       
- 				
- 				<ul style="list-style-type:circle">
- 				<li><a href="https://docs.google.com/document/d/1KN4asjM3K1PBbcQjq13RsSkNc9-8XMiqkgJKa8kxKOk/edit">$Main Dump</a></li>
- 				<br>
-	      <li><a href="https://docs.google.com/document/d/18zz8T3T-NVzJD7p_Gxol-AT94an8hTEx9vmrXIe9-Qk/edit">Personal Life</a></li>
-	      <li><a href="https://docs.google.com/document/d/1UMP97zspY7CyVbnX6jVILGt9ZAYZwJPFEpv1BQqXURY/edit">Hobbies</a></li>
-	      <li><a href="https://docs.google.com/document/d/1ns6xt_Sl4OUbHoJQw6BE0d17LLyemhLs4B7m4XLW54o/edit">Sports</a></li>
-	      <br>
-				<li><a href="https://docs.google.com/document/d/1VsqAfUfMeJJtrRbJb4W0-tCDCtjQ12xopPOw0gpCybg/edit">Politics</a></li>
-				<li><a href="https://docs.google.com/document/d/1lWPujMZwOCBNtLvi-e_rXwIG1u3A6EVDIDDahbKGuMU/edit">History</a></li>
-	      <li><a href="https://docs.google.com/document/d/1rCtBQtQP02T46vNukylTjvCEcmoDgXxkA5UjzrMXHIo/edit">Companies</a></li>
-	       
-
-			</ul>			
-
-
-	      </div>
-	    </div>
-	  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--**Below are all the CSS Code lines for the Site**-->
-
-<!--Style code below for Heading of the Tiles-->
-<style>
-
-
-.Set1 {
-  background-color: #FFE4B5;
-  color: black;
-  padding: 14px;
-	}
-</style>
-
-<!--Style code below for the tiles and its design-->
-<style>
-body {
-  font-family: sans-serif, monospace, Arial, cambria, Helvetica, sans-serif;
-  margin: 1;
-	}
-
-html {
-  box-sizing: border-box;
-	}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-	}
-
-.column {
-  margin-bottom: 10px;
-  padding: 2px;
-}
-
-.card {
-  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.3);
-  margin: 6px;
-	}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-	}
-
-.container {
-  padding: 0 15px;
-	}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-	}
-
-.title {
-  color: grey;
-	}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-	}
-
-.button:hover {
-  background-color: #555;
-	}
-
-/* Mobile Styles */
-@media screen and (max-width: 1080px) {
-  .column {
-    width: 100%;
-  }
-}
-
-/* Desktop Styles */
-@media screen and (min-width: 1081px) {
-  .column {
-    float: left;
-    width: 20%;
-  }
-}
-
-
-
-</style>
-
-
-
-
-<!--This is for highlighting the heading of the bifuracator inside the data in the buttons-->
-<style>
-mark { 
-  background-color: #f2c2b8;
-  color: black;
-}
-</style>
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-
-	        
-IIM AHMEDABAD - CHECKLISTS
-	        MORNING CHECKLIST
-				<li>Take medicine</li>
-				<li>Apply cream medical on face</li>
-				<li>Charge iPad before lecture</li>
-				<li>Charge mobile before lecture</li>
-				<li>Charge One Plus Budz before lecture</li>
-				<li>Clean ears</li>
-				<li>Switch off the mouse for further tasks</li>
-				<li>On & Off the airplane mode of mobile</li>
-				<li>Fill Water bottle</li>
-				<li>Apply oil + water/cream on hand</li>
-
-	        AFTERNOON CHECKLIST
-				<li>Apply Aloe Vera gel on face</li>
-				<li>Exercise using dumbbells/stretch band</li>
-				<li>Keep alarm if sleeping</li>
-				<li>Check LinkedIn - 5 minutes</li>
-				<li>On & Off the airplane mode of mobile</li>
-				<li>Check spam folder of IIM Gmail account</li>
-				<li>Switch off the mouse for further tasks</li>
-				<li>Check Yahoo mail and spam folder of yahoo mail - 5 minutes</li>
-				<li>Clean laptop</li>
-				<li>Eat dry fruits</li>
-				<li>Fill Water bottle - 3 minutes</li>
-				<li>Cut Nails - 3 minutes - 4 level stand in cupboard</li>
-				<li>Check archives messages in Whatsapp, check Instagram and Facebook</li>
-				<li>Change dustbin bag - Keetle box</li>
-				<li>Listen to HEADSPACE - 10 minutes</li>
-				<li>Call Dad/Mom/Didi</li>
-
-	        EVENING CHECKLIST
-				<li>Fill water bottle</li>
-				<li>Eat dry fruits</li>
-				<li>Charge trimmer for beard</li>
-				<li>Switch off the mouse</li>
-				<li>Drink Water</li>
-				<li>Wash clothes (Socks, Undergarments and Handkerchief)</li>
-				<li>On & Off the airplane mode of mobile</li>
-				<li>Brush teeth with Dantraj</li>
-				<li>Read and summarise news - 10 minutes</li>
-				<li>Exercise using stretch band</li>	
-
-	        SLEEP CHECKLIST
-				<li>Keep alarm for morning</li>
-				<li>Brush the teeth</li>
-				<li>Switch off the mouse</li>
-				<li>Take medicines</li>
-				<li>Clean up the room</li>
-				<li>Charge iPad</li>
-				<li>Charge mobile</li>
-				<li>Brush teeth + Dantraj</li>
-				<li>Close the windows and door</li>
-				<li>Apply lotion on hands + Oil on leg</li>
-				<li>Clean ears with earbuds</li>
-				<li>Wash and dry masks for the next day</li>
-				<li>Close the portion below door before sleeping</li>
-				<li>Put things on board for the next day</li>
-				<li>Check mobile is not on silent mode for next morning</li>
-				<li>Check all clothes are kept on wire/stand (That it does not stink for washing)</li>
-				<li>Keep things on charging and switch off the things that are not required</li>
-				<li>Close all doors and windows for flies</li>
-				<li>Fill Water Bottle</li>
-				<li>Apply Odomus</li>
-				<li>Get comfortable :P</li>
-				<li>Lay out the clothes for next day</li>
-	
-
-	        SUNDAY CHECKLIST
-				<li>Wash and polish shoes and slippers</li>
-				<li>Check for white hairs</li>
-				<li>Wash the water bottle [Daily use]</li>
-				<li>Wash clothes if any [Bedsheet + Room entrance cleaner]</li>
-				<li>Go for shopping, if required</li>
-				<li>Clean the whole room</li>
-				<li>Shape the eyebrow</li>
-				<li>Call Hardik/Swastika</li>
-				<li>Call people from Home</li>
-				<li>Call Baa/Bapa/Masi/Mama/Kaka/Ada</li>
--->
-
-
-
+</html>
